@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Louie - Portfolio de Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6a0dad;
+            color: white;
+            text-align: center;
+        }
+        header, nav, section, footer, .container {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        header {
+            background-color: #4a0073;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            background-color: #4a0073;
+            padding: 10px;
+            position: sticky;
+            top: 60px;
+            z-index: 999;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #00ff00;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #4a0073;
+            padding: 10px;
+            width: 100%;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .portfolio-image {
+            width: 40%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: white;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #00ff00;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #00ff00;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #2e8b57;
+        }
+        .img-eu{
+            width: 25%;
+            border-radius: 100%;
+            height: auto;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Louie <br> Portfolio de Design</h1>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#header">Sobre</a></li>
+                <li><a href="#sobre">Portfolio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="sobre">
+        <div class="container">
+            <h2>Área do Artista - Rafael</h2>
+            <p>Área de Atuação: Designer</p>
+            <img class="img-eu"src="eu.jpg" alt="Sua Foto">
+
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <img class="portfolio-image" src="capibara.png" alt="Projeto 1">
+            <img class="portfolio-image" src="MUAHAHA.png" alt="Projeto 2">
+            <img class="portfolio-image" src="QUEIJO.png" alt="Projeto 3">
+            <img class="portfolio-image" src="untitled.png" alt="Projeto 3">
+            <img class="portfolio-image" src="unt.png" alt="Projeto 3">
+        </div>
+    </section>
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <form action="processar_formulario.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 The Louie - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
